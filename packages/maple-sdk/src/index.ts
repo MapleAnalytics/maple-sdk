@@ -566,7 +566,7 @@ export const tracker = (
 				version: '1',
 				session_id: getSessionId(),
 				website_id: websiteId,
-				finalPayload,
+				payload: finalPayload,
 			}),
 		)
 	}
