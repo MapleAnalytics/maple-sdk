@@ -2,12 +2,12 @@ import React, { FC, useEffect, useRef } from 'react'
 
 import { tracker } from '.'
 
-interface UserTrackerProps {
+interface AnalyticsProps {
 	token: string
 	debug?: boolean
 }
 
-export const UserTracker: FC<UserTrackerProps> = ({ token, debug }) => {
+export const Analytics: FC<AnalyticsProps> = ({ token, debug }) => {
 	const hasBeenCalled = useRef(false)
 
 	useEffect(() => {
