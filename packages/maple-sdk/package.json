@@ -1,6 +1,6 @@
 {
 	"name": "maple-sdk",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"keywords": [
 		"analytics",
 		"web",
@@ -35,7 +35,7 @@
 	],
 	"scripts": {
 		"start": "node dist/bin.js",
-		"build": "tsup --dts",
+		"build": "tsup",
 		"dev": "tsup --watch",
 		"lint": "eslint . --ext .ts",
 		"test": "vitest run",
