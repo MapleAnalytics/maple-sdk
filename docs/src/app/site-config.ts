@@ -22,13 +22,18 @@ export const siteConfig = {
 			title: 'Getting Started',
 			items: [
 				{
-					title: 'NextJS',
-					href: '/docs/starter/nextjs',
+					title: 'NextJS (App)',
+					href: '/docs/starter/nextjs/app',
 					items: [],
 				},
 				{
-					title: 'React',
-					href: '/docs/starter/react',
+					title: 'NextJS (Pages)',
+					href: '/docs/starter/nextjs/pages',
+					items: [],
+				},
+				{
+					title: 'Remix',
+					href: '/docs/starter/remix',
 					items: [],
 				},
 				{
@@ -40,8 +45,8 @@ export const siteConfig = {
 		},
 	],
 	links: {
-		twitter: 'https://twitter.com/jullerino',
-		github: 'https://github.com/juliusmarminge/acme-corp-lib',
+		twitter: 'https://twitter.com/makisuo__',
+		github: 'https://github.com/MapleAnalytics/maple-sdk',
 		docs: '/docs',
 	},
 }

@@ -1,0 +1,34 @@
+# NextJS Pages Starter
+
+<Steps>
+
+### Install dependencies
+
+```bash
+pnpm add maple-sdk
+```
+
+### Initliaze Analytics Component
+
+<Callout type='info'>Your find your website id in the dashboard settings</Callout>
+
+```tsx
+// app.tsx
+import type { AppProps } from 'next/app'
+import { Analytics } from 'maple-sdk/react'
+
+function MyApp({ Component, pageProps }: AppProps) {
+	return (
+		<>
+			<Component {...pageProps} />
+			<Analytics token={'yourWebsiteID'} />
+		</>
+	)
+}
+
+export default MyApp
+```
+
+### Deploy and wait for data to come in!
+
+</Steps>

@@ -1,0 +1,40 @@
+# NextJS App Starter
+
+<Steps>
+
+### Install dependencies
+
+```bash
+pnpm add maple-sdk
+```
+
+### Initliaze Analytics Component
+
+<Callout type='warning' emoji='⚠️'>
+	This should be directly in your app directory
+</Callout>
+
+<Callout type='info'>Your find your website id in the dashboard settings</Callout>
+
+```tsx
+// app/layout.tsx
+import { Analytics } from 'maple-sdk/react'
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+	return (
+		<html lang='en'>
+			<head>
+				<title>Next.js tracked with Maple</title>
+			</head>
+			<body>
+				{children}
+				<Analytics token={'yourWebsiteID'} />
+			</body>
+		</html>
+	)
+}
+```
+
+### Deploy and wait for data to come in!
+
+</Steps>
