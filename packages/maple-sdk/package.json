@@ -1,6 +1,6 @@
 {
 	"name": "maple-sdk",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"keywords": [
 		"analytics",
 		"web",
@@ -16,28 +16,18 @@
 	"exports": {
 		".": {
 			"require": "./dist/index.js",
-			"import": "./dist/index.mjs"
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
 		},
 		"./react": {
 			"require": "./dist/react.js",
-			"import": "./dist/react.mjs"
+			"import": "./dist/react.mjs",
+			"types": "./dist/react.d.ts"
 		},
 		"./tracker": {
 			"require": "./dist/tracker.js",
-			"import": "./dist/tracker.mjs"
-		}
-	},
-	"typesVersions": {
-		"*": {
-			"*": [
-				"dist/types/index.d.ts"
-			],
-			"react": [
-				"dist/types/react.d.ts"
-			],
-			"tracker": [
-				"dist/types/tracker.d.ts"
-			]
+			"import": "./dist/tracker.mjs",
+			"types": "./dist/tracker.d.ts"
 		}
 	},
 	"main": "dist/index.js",
