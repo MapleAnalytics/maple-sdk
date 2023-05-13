@@ -7,4 +7,9 @@ export default defineConfig((opts) => ({
 	outDir: 'dist',
 	sourcemap: true,
 	target: 'es2017',
+	esbuildOptions(options) {
+		options.banner = {
+			js: '"use client"',
+		}
+	},
 }))
