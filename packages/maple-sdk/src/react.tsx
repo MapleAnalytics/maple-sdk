@@ -1,5 +1,3 @@
-'use client'
-
 import React, { FC, useEffect, useRef } from 'react'
 
 import { tracker } from '.'
