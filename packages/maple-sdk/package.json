@@ -1,8 +1,8 @@
 {
 	"name": "maple-sdk",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"keywords": [
-		"analutics",
+		"analytics",
 		"web",
 		"react"
 	],
@@ -13,9 +13,6 @@
 		"url": "https://github.com/MapleAnalytics/maple-sdk",
 		"directory": "packages/maple-sdk"
 	},
-	"bin": {
-		"prisma-enums": "dist/bin.js"
-	},
 	"files": [
 		"dist",
 		"package.json",
@@ -24,7 +21,7 @@
 	],
 	"scripts": {
 		"start": "node dist/bin.js",
-		"build": "tsup",
+		"build": "tsup --dts",
 		"dev": "tsup --watch",
 		"lint": "eslint . --ext .ts",
 		"test": "vitest run",

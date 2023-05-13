@@ -5,5 +5,6 @@ export default defineConfig((opts) => ({
 	format: ['cjs'],
 	clean: !opts.watch,
 	outDir: 'dist',
+	sourcemap: true,
 	target: 'es2017',
 }))
