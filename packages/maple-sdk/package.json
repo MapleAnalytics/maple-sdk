@@ -1,6 +1,6 @@
 {
 	"name": "maple-sdk",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"keywords": [
 		"analytics",
 		"web",
@@ -12,6 +12,20 @@
 		"type": "git",
 		"url": "https://github.com/MapleAnalytics/maple-sdk",
 		"directory": "packages/maple-sdk"
+	},
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs"
+		},
+		"react": {
+			"require": "./dist/react.js",
+			"import": "./dist/react.mjs"
+		},
+		"tracker": {
+			"require": "./dist/tracker.js",
+			"import": "./dist/tracker.mjs"
+		}
 	},
 	"files": [
 		"dist",
