@@ -440,7 +440,12 @@ export const tracker = (
 		[key: string]: string
 	} = {}
 
-	const debug = config.debug || !isProduction()
+	let debug: boolean
+	if (document.currentScript) {
+		debug = !!document.currentScript?.getAttribute('data-debug')
+	} else {
+		debug = config.debug || !isProduction()
+	}
 
 	let lastPage: string
 
