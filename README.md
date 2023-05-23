@@ -1,5 +1,3 @@
-# Acme Corp (Library Edition)
+# Typescript SDK for Maple
 
-Starter template for your next TypeScript library monorepo.
-
-Also functioning as a prisma generator to reduce bundle sizes by a few megabytes
+[Docs](https://docs.maple.dev) can be found [here](https://docs.maple.dev)
