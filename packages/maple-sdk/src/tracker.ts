@@ -1,3 +1,3 @@
-import { tracker } from './index'
+import { tracker } from './index.js'
 
 tracker()

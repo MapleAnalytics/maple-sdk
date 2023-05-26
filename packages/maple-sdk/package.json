@@ -1,6 +1,7 @@
 {
 	"name": "maple-sdk",
-	"version": "0.1.2",
+	"version": "0.2.0",
+	"type": "module",
 	"keywords": [
 		"analytics",
 		"web",
@@ -69,5 +70,8 @@
 		"react-dom": "^18.2.0",
 		"tsup": "^6.7.0",
 		"typescript": "^5.0.4"
+	},
+	"dependencies": {
+		"nanoid": "^4.0.2"
 	}
 }

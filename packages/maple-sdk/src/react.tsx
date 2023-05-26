@@ -1,20 +1,20 @@
 import React, { FC, useEffect, useRef } from 'react'
 
-import { tracker } from '.'
+import { TrackerConfig, tracker } from './index.js'
 
-interface AnalyticsProps {
+interface AnalyticsProps extends Omit<TrackerConfig, "websiteId"> {
 	token: string
 	debug?: boolean
 }
 
-export const Analytics: FC<AnalyticsProps> = ({ token, debug }) => {
+export const Analytics: FC<AnalyticsProps> = ({ token, ...rest }) => {
 	const hasBeenCalled = useRef(false)
 
 	useEffect(() => {
 		if (!hasBeenCalled.current) {
 			tracker({
 				websiteId: token,
-				debug: debug,
+				...rest,
 			})
 			hasBeenCalled.current = true
 		}

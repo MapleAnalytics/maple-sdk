@@ -3,7 +3,11 @@ function getEnvironment(): string {
 	return nodeEnv.trim().toLowerCase()
 }
 
-export function isProduction(): boolean {
+export function isProduction(environment?: 'production' | 'development'): boolean {
+	if (environment) {
+		return environment === 'production'
+	}
+
 	return getEnvironment() === 'production'
 }
 

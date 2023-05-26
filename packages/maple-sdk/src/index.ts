@@ -1,12 +1,14 @@
-import { isProduction } from './helper'
+import { isProduction } from './helper.js'
+import { nanoid } from 'nanoid'
 
-export const tracker = (
-	config: {
-		domain?: string
-		debug?: boolean
-		websiteId?: string
-	} = {},
-) => {
+export interface TrackerConfig {
+	domain?: string
+	debug?: boolean
+	environment?: 'production' | 'development'
+	debugUrl?: string
+	websiteId?: string
+}
+export const tracker = (config: TrackerConfig = {}) => {
 	const timezones: { [key: string]: string } = {
 		'Asia/Barnaul': 'RU',
 		'Africa/Nouakchott': 'MR',
@@ -433,18 +435,22 @@ export const tracker = (
 		'Asia/Aqtau': 'KZ',
 		'Asia/Urumqi': 'CN',
 	}
-	const url = `https://api.maple.dev/event`
+	const url = config.debugUrl || 'https://api.maple.dev/event'
 	const COOKIE_NAME = 'maple-session-id'
 	const websiteId = config.websiteId || document.currentScript?.getAttribute('data-websiteId')
 	const globalAttributes: {
 		[key: string]: string
 	} = {}
 
-	let debug: boolean
+	const production = isProduction(config.environment)
+
+	let debug = !isProduction(config.environment)
 	if (document.currentScript) {
 		debug = !!document.currentScript?.getAttribute('data-debug')
 	} else {
-		debug = config.debug || !isProduction()
+		if (config.debug !== undefined) {
+			debug = config.debug
+		}
 	}
 
 	let lastPage: string
@@ -462,17 +468,6 @@ export const tracker = (
 	/**
 	 * Generate uuid to identify the session. Random, not data-derived
 	 */
-	function uuidv4(): string {
-		if (debug) {
-			console.info('MakiAnalytics: Create new Session_ID')
-		}
-
-		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-			const r = (Math.random() * 16) | 0,
-				v = c == 'x' ? r : (r & 0x3) | 0x8
-			return v.toString(16)
-		})
-	}
 
 	function getSessionId(): string | undefined {
 		const cookie: { [key: string]: string } = {}
@@ -494,7 +489,7 @@ export const tracker = (
 		 *   - First request in a session will generate a new session id
 		 *   - The next request will keep the same session id and extend the TTL for 30 more minutes
 		 */
-		const sessionId = getSessionId() || uuidv4()
+		const sessionId = getSessionId() || nanoid()
 		let cookieValue = `${COOKIE_NAME}=${sessionId}; Max-Age=1800; path=/; secure`
 
 		if (domain) {
@@ -545,7 +540,7 @@ export const tracker = (
 		const finalPayload = JSON.stringify(Object.assign({}, JSON.parse(safePayload), globalAttributes))
 
 		if (debug) {
-			return console.log(`MakiAnalytics Event Send: ${name}`, {
+			console.log(`MakiAnalytics Event Send: ${name}`, {
 				timestamp: new Date().toISOString(),
 				action: name,
 				version: '1',
@@ -556,19 +551,21 @@ export const tracker = (
 			})
 		}
 
-		const request = new XMLHttpRequest()
-		request.open('POST', url, true)
-		request.setRequestHeader('Content-Type', 'application/json')
-		request.send(
-			JSON.stringify({
-				timestamp: new Date().toISOString(),
-				action: name,
-				version: '1',
-				session_id: getSessionId(),
-				website_id: websiteId,
-				payload: finalPayload,
-			}),
-		)
+		if (production) {
+			const request = new XMLHttpRequest()
+			request.open('POST', url, true)
+			request.setRequestHeader('Content-Type', 'application/json')
+			request.send(
+				JSON.stringify({
+					timestamp: new Date().toISOString(),
+					action: name,
+					version: '1',
+					session_id: getSessionId(),
+					website_id: websiteId,
+					payload: finalPayload,
+				}),
+			)
+		}
 	}
 
 	/**
@@ -590,11 +587,10 @@ export const tracker = (
 			const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
 			country = timezones[timezone]
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			locale =
-				navigator.languages && navigator.languages.length
-					? navigator.languages[0]
-					: // @ts-expect-error ya know
-					  navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en'
+			locale = navigator.languages?.length
+				? navigator.languages[0]
+				: // @ts-expect-error ya know
+				  navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en'
 		} catch (error) {
 			// ignore error
 		}
