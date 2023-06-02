@@ -1,12 +1,8 @@
 {
 	"name": "maple-sdk",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"type": "module",
-	"keywords": [
-		"analytics",
-		"web",
-		"react"
-	],
+	"keywords": ["analytics", "web", "react"],
 	"author": "Makisuo",
 	"license": "MIT",
 	"repository": {
@@ -34,22 +30,13 @@
 	},
 	"typesVersions": {
 		"*": {
-			"react": [
-				"dist/react.d.ts"
-			],
-			"tracker": [
-				"dist/tracker.d.ts"
-			]
+			"react": ["dist/react.d.ts"],
+			"tracker": ["dist/tracker.d.ts"]
 		}
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist",
-		"package.json",
-		"LICENSE",
-		"README.md"
-	],
+	"files": ["dist", "package.json", "LICENSE", "README.md"],
 	"scripts": {
 		"start": "node dist/bin.js",
 		"build": "tsup",
@@ -70,8 +57,5 @@
 		"react-dom": "^18.2.0",
 		"tsup": "^6.7.0",
 		"typescript": "^5.0.4"
-	},
-	"dependencies": {
-		"nanoid": "^4.0.2"
 	}
 }
