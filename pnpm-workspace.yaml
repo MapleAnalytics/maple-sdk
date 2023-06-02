@@ -1,6 +1,4 @@
 packages:
     - docs
-    - template
-    - new-docs
     - examples/*
     - packages/*
