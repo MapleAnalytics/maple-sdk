@@ -18,6 +18,8 @@ public/build/
 dist/
 generated/
 
+template/
+
 # ENV FILES
 .env
 .env.local
