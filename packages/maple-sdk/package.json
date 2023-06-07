@@ -1,6 +1,6 @@
 {
 	"name": "maple-sdk",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"type": "module",
 	"keywords": ["analytics", "web", "react"],
 	"author": "Makisuo",
@@ -45,10 +45,6 @@
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"typecheck": "tsc --noEmit"
-	},
-	"optionalDependencies": {
-		"react": ">=16.0.0",
-		"react-dom": ">=16.0.0"
 	},
 	"devDependencies": {
 		"@types/react": "18.2.8",
