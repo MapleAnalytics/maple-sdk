@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useEffect, useRef } from "react"
 
-import { TrackerConfig, tracker } from './index.js'
+import { TrackerConfig, tracker } from "./index.js"
 
 interface AnalyticsProps extends Omit<TrackerConfig, "websiteId"> {
 	token: string
@@ -22,3 +22,5 @@ export const Analytics: FC<AnalyticsProps> = ({ token, ...rest }) => {
 
 	return <></>
 }
+
+export default { Analytics }

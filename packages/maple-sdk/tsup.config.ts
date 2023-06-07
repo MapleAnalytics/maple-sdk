@@ -1,19 +1,33 @@
-import { defineConfig } from 'tsup'
+import { Options, defineConfig } from "tsup"
 
-export default defineConfig((opts) => ({
-	entryPoints: ['src/index.ts', 'src/react.tsx', 'src/tracker.ts'],
-	format: ['cjs', 'esm'],
-	clean: !opts.watch,
-	outDir: 'dist',
-	target: 'es2017',
-	sourcemap: true,
-	// minify: true,
-	dts: true,
+const cfg: Options = {
 	splitting: false,
-	external: ['react'],
-	esbuildOptions(options) {
-		options.banner = {
-			js: '"use client"',
-		}
+	sourcemap: true,
+	treeshake: false,
+	dts: true,
+	format: ["cjs", "esm"],
+}
+
+export default defineConfig((opts) => [
+	{
+		...cfg,
+		clean: !opts.watch,
+		entry: ["src/index.ts", "src/tracker.ts"],
+		outDir: "dist",
 	},
-}))
+	{
+		...cfg,
+		entry: {
+			index: "src/react.tsx",
+		},
+		format: ["cjs", "esm"],
+		clean: !opts.watch,
+		outDir: "dist/react",
+		external: ["react"],
+		esbuildOptions(options) {
+			options.banner = {
+				js: '"use client"',
+			}
+		},
+	},
+])

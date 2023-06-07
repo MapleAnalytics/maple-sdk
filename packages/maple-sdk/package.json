@@ -1,6 +1,6 @@
 {
 	"name": "maple-sdk",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"type": "module",
 	"keywords": ["analytics", "web", "react"],
 	"author": "Makisuo",
@@ -12,17 +12,18 @@
 	},
 	"exports": {
 		".": {
-			"require": "./dist/index.js",
-			"import": "./dist/index.mjs",
-			"types": "./dist/index.d.ts"
+			"browser": "./dist/index.js",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
 		},
 		"./react": {
-			"require": "./dist/react.js",
-			"import": "./dist/react.mjs",
-			"types": "./dist/react.d.ts"
+			"browser": "./dist/react/index.js",
+			"import": "./dist/react/index.js",
+			"require": "./dist/react/index.cjs"
 		},
 		"./tracker": {
-			"require": "./dist/tracker.js",
+			"browser": "./dist/tracker.js",
+			"require": "./dist/tracker.cjs",
 			"import": "./dist/tracker.mjs",
 			"types": "./dist/tracker.d.ts"
 		},
@@ -30,7 +31,8 @@
 	},
 	"typesVersions": {
 		"*": {
-			"react": ["dist/react.d.ts"],
+			"*": ["dist/index.d.ts"],
+			"react": ["dist/react/index.d.ts"],
 			"tracker": ["dist/tracker.d.ts"]
 		}
 	},

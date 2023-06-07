@@ -187,7 +187,7 @@ importers:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.24)
       maple-sdk:
-        specifier: 0.2.1
+        specifier: 0.2.2
         version: link:../../packages/maple-sdk
       next:
         specifier: 13.4.4
