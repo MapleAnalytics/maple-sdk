@@ -47,15 +47,15 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"optionalDependencies": {
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react": ">=16.0.0",
+		"react-dom": ">=16.0.0"
 	},
 	"devDependencies": {
-		"@types/react": "18.0.38",
-		"eslint": "^8.39.0",
+		"@types/react": "18.2.8",
+		"eslint": "^8.42.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"tsup": "^6.7.0",
-		"typescript": "^5.0.4"
+		"typescript": "^5.1.3"
 	}
 }
