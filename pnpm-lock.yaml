@@ -70,7 +70,7 @@ importers:
         version: 0.176.0(react@18.2.0)
       maple-sdk:
         specifier: ^0.2.0
-        version: link:../packages/maple-sdk
+        version: 0.2.0
       next:
         specifier: ^13.4.1
         version: 13.4.1(react-dom@18.2.0)(react@18.2.0)
@@ -151,7 +151,7 @@ importers:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.24)
       maple-sdk:
-        specifier: ^0.2.0
+        specifier: 0.3.0
         version: link:../../packages/maple-sdk
       next:
         specifier: 13.4.4
@@ -187,7 +187,7 @@ importers:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.24)
       maple-sdk:
-        specifier: 0.2.2
+        specifier: 0.3.0
         version: link:../../packages/maple-sdk
       next:
         specifier: 13.4.4
@@ -4323,6 +4323,15 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /maple-sdk@0.2.0:
+    resolution: {integrity: sha512-d2pmeGSNizZJqs2R/TYY8csI/4+mYAqgA4w0YoZhPnrURye7IAWOz/xqBl/uTsgU7zROMxLQEJlLQxrlaTNkVg==}
+    dependencies:
+      nanoid: 4.0.2
+    optionalDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /markdown-extensions@1.1.1:
     resolution: {integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==}
     engines: {node: '>=0.10.0'}
@@ -4841,6 +4850,12 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanoid@4.0.2:
+    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: false
 
   /napi-build-utils@1.0.2:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
