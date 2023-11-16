@@ -1,13 +1,13 @@
-import React, { FC, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 
-import { TrackerConfig, tracker } from "./index.js"
+import { type TrackerConfig, tracker } from "./index.js"
 
 interface AnalyticsProps extends Omit<TrackerConfig, "websiteId"> {
 	token: string
 	debug?: boolean
 }
 
-export const Analytics: FC<AnalyticsProps> = ({ token, ...rest }) => {
+export const Analytics = ({ token, ...rest }: AnalyticsProps) => {
 	const hasBeenCalled = useRef(false)
 
 	useEffect(() => {
@@ -18,9 +18,11 @@ export const Analytics: FC<AnalyticsProps> = ({ token, ...rest }) => {
 			})
 			hasBeenCalled.current = true
 		}
-	}, [token])
+		// Including all props in the dependency array
+	}, [token, ...Object.values(rest)])
 
-	return <></>
+	// Return null for components that don't render anything
+	return null
 }
 
-export default { Analytics }
+export default Analytics
