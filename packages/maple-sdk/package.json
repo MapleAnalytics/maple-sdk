@@ -7,13 +7,24 @@
 		"web",
 		"react"
 	],
-	"private": "false",
+	"private": false,
 	"author": "Makisuo",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/MapleAnalytics/maple-sdk",
 		"directory": "packages/maple-sdk"
+	},
+	"scripts": {
+		"start": "node dist/bin.js",
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"lint": "eslint . --ext .ts",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"typecheck": "tsc --noEmit",
+		"changelog:generate": "changelogen@latest --bump",
+		"changelog:release": "pnpm run build && changelogen@latest --release --publish"
 	},
 	"exports": {
 		".": {
@@ -55,17 +66,9 @@
 		"LICENSE",
 		"README.md"
 	],
-	"scripts": {
-		"start": "node dist/bin.js",
-		"build": "tsup",
-		"dev": "tsup --watch",
-		"lint": "eslint . --ext .ts",
-		"test": "vitest run",
-		"test:watch": "vitest",
-		"typecheck": "tsc --noEmit"
-	},
 	"devDependencies": {
 		"@types/react": "18.2.8",
+		"changelogen": "^0.5.5",
 		"eslint": "^8.42.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
