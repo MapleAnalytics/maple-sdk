@@ -3,6 +3,34 @@
 
 
 
+## v0.4.2
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.0.2...v0.4.2)
+
+### 🏡 Chore
+
+- **release:** V0.0.2 ([29d7a59](https://github.com/MapleAnalytics/maple-sdk/commit/29d7a59))
+- Move changelog ([a823e3d](https://github.com/MapleAnalytics/maple-sdk/commit/a823e3d))
+- Fix typescirpt build ([da7d58d](https://github.com/MapleAnalytics/maple-sdk/commit/da7d58d))
+
+### ❤️ Contributors
+
+- Makisuo
+
+## v0.4.1
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.0.2...v0.4.1)
+
+### 🏡 Chore
+
+- **release:** V0.0.2 ([29d7a59](https://github.com/MapleAnalytics/maple-sdk/commit/29d7a59))
+- Move changelog ([a823e3d](https://github.com/MapleAnalytics/maple-sdk/commit/a823e3d))
+- Fix typescirpt build ([da7d58d](https://github.com/MapleAnalytics/maple-sdk/commit/da7d58d))
+
+### ❤️ Contributors
+
+- Makisuo
+
 ## v0.0.2
 
 
