@@ -434,7 +434,7 @@ export const tracker = (config: TrackerConfig = {}) => {
 		"Asia/Aqtau": "KZ",
 		"Asia/Urumqi": "CN",
 	}
-	const url = config.debugUrl || "https://safesight.dev/api/event"
+	const url = config.debugUrl || "https://www.safesight.dev/api/event"
 	const COOKIE_NAME = "maple-session-id"
 	const websiteId = config.websiteId || document.currentScript?.getAttribute("data-websiteId")
 	const globalAttributes: {
