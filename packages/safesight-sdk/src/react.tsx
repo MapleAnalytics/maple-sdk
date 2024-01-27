@@ -1,21 +1,27 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 import { type TrackerConfig, tracker } from "./index.js"
 
 interface AnalyticsProps extends Omit<TrackerConfig, "websiteId"> {
 	token: string
+	debug?: boolean
 }
 
 export const Analytics = ({ token, ...rest }: AnalyticsProps) => {
+	const hasBeenCalled = useRef(false)
+
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
-		tracker({
-			websiteId: token,
-			...rest,
-		})
-	}, [])
+		if (!hasBeenCalled.current) {
+			tracker({
+				websiteId: token,
+				...rest,
+			})
+			hasBeenCalled.current = true
+		}
+	}, [token, ...Object.values(rest)])
 
 	return null
 }
