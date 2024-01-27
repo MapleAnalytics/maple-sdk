@@ -3,6 +3,18 @@
 
 
 
+## v0.6.7
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.6...v0.6.7)
+
+### 🏡 Chore
+
+- **release:** V0.6.6 ([4d05aa3](https://github.com/MapleAnalytics/maple-sdk/commit/4d05aa3))
+
+### ❤️ Contributors
+
+- Makisuo
+
 ## v0.6.6
 
 [compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.5...v0.6.6)
