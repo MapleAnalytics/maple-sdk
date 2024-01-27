@@ -3,6 +3,10 @@
 
 
 
+## v0.6.8
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.7...v0.6.8)
+
 ## v0.6.7
 
 [compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.6...v0.6.7)
