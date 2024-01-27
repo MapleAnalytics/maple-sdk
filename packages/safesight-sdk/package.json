@@ -1,6 +1,6 @@
 {
   "name": "safesight",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "type": "module",
   "keywords": [
     "analytics",
@@ -33,6 +33,7 @@
     "README.md"
   ],
   "dependencies": {
+    "@builder.io/qwik": "^1.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

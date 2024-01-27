@@ -3,6 +3,18 @@
 
 
 
+## v0.6.5
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.4...v0.6.5)
+
+### 🏡 Chore
+
+- Cleanup sdk ([5e1a5ff](https://github.com/MapleAnalytics/maple-sdk/commit/5e1a5ff))
+
+### ❤️ Contributors
+
+- Makisuo
+
 ## v0.6.4
 
 [compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.3...v0.6.4)
