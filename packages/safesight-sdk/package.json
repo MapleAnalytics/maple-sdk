@@ -1,6 +1,6 @@
 {
   "name": "safesight",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "type": "module",
   "keywords": [
     "analytics",
@@ -32,12 +32,14 @@
     "LICENSE",
     "README.md"
   ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@types/react": "18.2.48",
     "bunchee": "^4.4.2",
     "changelogen": "^0.5.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
   },
   "main": "./dist/es/index.js",
