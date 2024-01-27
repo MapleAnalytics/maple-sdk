@@ -3,6 +3,18 @@
 
 
 
+## v0.6.6
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.5...v0.6.6)
+
+### 🚀 Enhancements
+
+- Add qwik package ([fd64725](https://github.com/MapleAnalytics/maple-sdk/commit/fd64725))
+
+### ❤️ Contributors
+
+- Makisuo
+
 ## v0.6.5
 
 [compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.4...v0.6.5)
