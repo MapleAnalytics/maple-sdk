@@ -3,6 +3,22 @@
 
 
 
+## v0.6.3
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.2...v0.6.3)
+
+### 🩹 Fixes
+
+- Client compone tmissing ([67b65b1](https://github.com/MapleAnalytics/maple-sdk/commit/67b65b1))
+
+### 🏡 Chore
+
+- **release:** V0.6.2 ([59e07c4](https://github.com/MapleAnalytics/maple-sdk/commit/59e07c4))
+
+### ❤️ Contributors
+
+- Makisuo
+
 ## v0.6.2
 
 [compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.6.1...v0.6.2)
