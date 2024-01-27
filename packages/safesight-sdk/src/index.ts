@@ -599,8 +599,7 @@ export const tracker = ({
 	}
 
 	// Client
-	// @ts-expect-error set global object on window
-	window.Safesight = { trackEvent: sendEvent }
+	window.Safesight = { sendEvent }
 
 	// Event listener
 	window.addEventListener("hashchange", trackPageHit)

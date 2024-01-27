@@ -9,7 +9,7 @@ interface AnalyticsProps extends Omit<TrackerConfig, "websiteId"> {
 	debug?: boolean
 }
 
-export const Analytics = ({ token, ...rest }: AnalyticsProps) => {
+const Analytics = ({ token, ...rest }: AnalyticsProps) => {
 	const hasBeenCalled = useRef(false)
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
@@ -25,5 +25,7 @@ export const Analytics = ({ token, ...rest }: AnalyticsProps) => {
 
 	return null
 }
+
+export { Analytics, tracker }
 
 export default Analytics
