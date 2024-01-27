@@ -1,4 +1,4 @@
-import { isProduction } from "./helper.js"
+import { isProduction } from "./lib/helper.js"
 
 export interface TrackerConfig {
 	domain?: string
@@ -543,7 +543,8 @@ export const tracker = (config: TrackerConfig = {}) => {
 		const finalPayload = JSON.stringify(Object.assign({}, JSON.parse(safePayload), globalAttributes))
 
 		if (debug) {
-			console.log(`MakiAnalytics Event Send: ${name}`, {
+			console.log(`MakiAnalytics Event Send: ${name}`, "color: white; background-color: #26bfa5;")
+			console.log({
 				timestamp: new Date().toISOString(),
 				action: name,
 				version: "1",

@@ -1,7 +1,7 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 
-import { Analytics } from "maple-sdk/react"
+import { Analytics } from "safesight/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
