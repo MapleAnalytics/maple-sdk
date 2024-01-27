@@ -3,6 +3,19 @@
 
 
 
+## v0.6.1
+
+[compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.4.2...v0.6.1)
+
+### 🏡 Chore
+
+- Fix typescirpt build ([da7d58d](https://github.com/MapleAnalytics/maple-sdk/commit/da7d58d))
+- **release:** V0.4.2 ([0768441](https://github.com/MapleAnalytics/maple-sdk/commit/0768441))
+
+### ❤️ Contributors
+
+- Makisuo
+
 ## v0.4.2
 
 [compare changes](https://github.com/MapleAnalytics/maple-sdk/compare/v0.0.2...v0.4.2)
