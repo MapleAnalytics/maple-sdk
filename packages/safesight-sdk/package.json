@@ -1,6 +1,6 @@
 {
   "name": "safesight",
-  "version": "0.6.9",
+  "version": "0.7.0",
   "type": "module",
   "keywords": [
     "analytics",
@@ -93,12 +93,12 @@
     },
     "./tracker": {
       "import": {
-        "types": "./dist/es/tracker.d.ts",
-        "default": "./dist/es/tracker.js"
+        "types": "./dist/tracker.d.ts",
+        "default": "./dist/tracker.js"
       },
       "require": {
-        "types": "./dist/cjs/tracker.d.cts",
-        "default": "./dist/cjs/tracker.cjs"
+        "types": "./dist/tracker.d.cts",
+        "default": "./dist/tracker.cjs"
       }
     }
   }
