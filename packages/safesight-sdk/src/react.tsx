@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react"
 
-import { type TrackerConfig, tracker } from "./index.js"
+import { tracker, type TrackerConfig } from "./index.js"
+import { track } from "./lib/generic.js"
 
 interface AnalyticsProps extends Omit<TrackerConfig, "websiteId"> {
 	token: string
@@ -26,6 +27,6 @@ const Analytics = ({ token, ...rest }: AnalyticsProps) => {
 	return null
 }
 
-export { Analytics, tracker }
+export { Analytics, track }
 
 export default Analytics
