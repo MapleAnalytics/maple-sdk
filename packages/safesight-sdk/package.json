@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "node dist/bin.js",
-    "build": "bunchee",
+    "build": "bunchee && bunchee ./src/tracker.ts -f cjs -o ./dist/tracker.js",
     "dev": "tsup --watch",
     "lint": "eslint . --ext .ts",
     "test": "vitest run",
@@ -90,7 +90,6 @@
         "types": "./dist/cjs/qwik.d.cts",
         "default": "./dist/cjs/qwik.cjs"
       }
-    },
-    "./tracker": "./dist/tracker.js"
+    }
   }
 }
