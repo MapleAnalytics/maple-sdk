@@ -533,18 +533,20 @@ export const tracker = ({
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const finalPayload = JSON.stringify(Object.assign({}, JSON.parse(safePayload), globalAttributes))
 
+		const body = {
+			timestamp: new Date().toISOString(),
+			action: name,
+			version: "1",
+			session_id: getSessionId(),
+			website_id: websiteId,
+			payload: finalPayload,
+		}
+
 		if (debug) {
 			console.log(
-				"%c Safesight Page Visit Event Send:",
+				`%c Safesight ${name.toUpperCase()} Event Send:`,
 				"background: #26bfa5; color: #ffffff; padding: 4px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;",
-				{
-					timestamp: new Date().toISOString(),
-					action: name,
-					version: "1",
-					session_id: getSessionId(),
-					website_id: websiteId,
-					payload: JSON.parse(finalPayload),
-				},
+				body,
 			)
 		}
 
@@ -552,16 +554,7 @@ export const tracker = ({
 			const request = new XMLHttpRequest()
 			request.open("POST", serverUrl, true)
 			request.setRequestHeader("Content-Type", "application/json")
-			request.send(
-				JSON.stringify({
-					timestamp: new Date().toISOString(),
-					action: name,
-					version: "1",
-					session_id: getSessionId(),
-					website_id: websiteId,
-					payload: finalPayload,
-				}),
-			)
+			request.send(JSON.stringify(body))
 		}
 	}
 

@@ -67,6 +67,16 @@
         "default": "./dist/cjs/react.cjs"
       }
     },
+    "./qwik": {
+      "import": {
+        "types": "./dist/es/qwik.d.ts",
+        "default": "./dist/es/qwik.js"
+      },
+      "require": {
+        "types": "./dist/cjs/qwik.d.cts",
+        "default": "./dist/cjs/qwik.cjs"
+      }
+    },
     "./tracker": {
       "import": {
         "types": "./dist/es/tracker.d.ts",
