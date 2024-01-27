@@ -3,9 +3,9 @@ function getEnvironment() {
 	if (typeof process !== "undefined" && process.env) {
 		const nodeEnv = process.env.NODE_ENV || "development"
 		return nodeEnv.trim().toLowerCase()
-	} else {
-		return "production"
 	}
+
+	return "production"
 }
 
 export function isProduction(environment?: "production" | "development"): boolean {
@@ -17,4 +17,12 @@ export function isProduction(environment?: "production" | "development"): boolea
 
 export function isBrowser(): boolean {
 	return typeof window !== "undefined"
+}
+
+/**
+ * Generate uuid to identify the session. Random, not data-derived
+ */
+
+export function createRandomId() {
+	return Math.random().toString(36).substring(2) + Date.now().toString(36)
 }
