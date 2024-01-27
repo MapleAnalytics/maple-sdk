@@ -1,0 +1,37 @@
+{
+    "name": "safesight-core",
+    "version": "0.0.1",
+    "type": "module",
+    "keywords": [
+        "analytics",
+        "web",
+        "react"
+    ],
+    "private": false,
+    "author": "Makisuo",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MapleAnalytics/maple-sdk",
+        "directory": "packages/safesight-core"
+    },
+    "scripts": {
+        "start": "node dist/bin.js",
+        "build": "bunchee",
+        "dev": "bunchee --watch",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "typecheck": "tsc --noEmit",
+        "changelog:generate": "changelogen --bump",
+        "changelog:release": "pnpm run build && changelogen --release --publish"
+    },
+    "devDependencies": {
+        "bunchee": "^4.4.2"
+    },
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        "./tracker": "./dist/tracker.js"
+    }
+}

@@ -1,6 +1,6 @@
 {
   "name": "safesight",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "type": "module",
   "keywords": [
     "analytics",
@@ -91,15 +91,6 @@
         "default": "./dist/cjs/qwik.cjs"
       }
     },
-    "./tracker": {
-      "import": {
-        "types": "./dist/tracker.d.ts",
-        "default": "./dist/tracker.js"
-      },
-      "require": {
-        "types": "./dist/tracker.d.cts",
-        "default": "./dist/tracker.cjs"
-      }
-    }
+    "./tracker": "./dist/tracker.js"
   }
 }
