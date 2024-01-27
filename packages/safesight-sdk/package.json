@@ -32,12 +32,26 @@
     "LICENSE",
     "README.md"
   ],
-  "dependencies": {
-    "@builder.io/qwik": "^1.4.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "peerDependencies": {
+    "react": ">18.0.0",
+    "react-dom": ">18.0.0",
+    "@builder.io/qwik": ">1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@builder.io/qwik": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@builder.io/qwik": "^1.4.2",
     "@types/react": "18.2.48",
     "bunchee": "^4.4.2",
     "changelogen": "^0.5.5",
